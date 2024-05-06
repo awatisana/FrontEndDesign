@@ -1,0 +1,102 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <style>
+   .outer{
+  width: 500px;
+  height: 250px;
+  overflow: scroll;
+  border: 1px solid red;
+}
+table{
+  width: 600px;
+  border-collapse: collapse;
+}
+td,
+th{
+  border: 1px solid black;
+  padding: 10px;
+  background: white;
+}
+thead{
+  top: 0;
+  position: sticky;
+  z-index: 1;
+}
+tr td:nth-child(1),
+tr td:nth-child(2),
+tr th:nth-child(1),
+tr th:nth-child(2){
+  position: sticky;
+  left: 0;
+}
+tr th:nth-child(2),
+tr td:nth-child(2){
+  left: 95px;
+}
+
+    </style>
+</head>
+    <body>
+      <div class="outer">
+        <table>
+          <thead>
+            <tr>
+              <th>NO</th>
+              <th>ID</th>
+              <th>NAME</th>
+              <th>EMAIL</th>
+              <th>MOBILE NO</th>
+            </tr>
+          
+          </thead>
+          <tr>
+            <td>1</d>
+            <td>201</td>
+            <td>sana</td>
+            <td>khansana8314@gmail.com</td>
+            <td>6360164152</td>
+          </tr>
+        <tr>
+            <td>2</d>
+            <td>202</td>
+            <td>saniya</td>
+            <td>saniya123@gamil.com</td>
+            <td>987654321</td>
+          </tr>
+      <tr>
+            <td>3</d>
+            <td>203</td>
+            <td>yasmin</td>
+            <td>yasmin98@gmail.com</td>
+            <td>5698319765</td>
+          </tr>
+      <tr>
+            <td>4</d>
+            <td>204</td>
+            <td>sadiq</td>
+            <td>sadiq345@gamil.com</td>
+            <td>8319642190</td>
+          </tr>
+      <tr>
+            <td>5</d>
+            <td>205</td>
+            <td>abid</td>
+            <td>abid876@gmail.com</td>
+            <td>6421975432</td>
+          </tr>
+      <tr>
+            <td>6</d>
+            <td>206</td>
+            <td>rahul</td>
+            <td>rahol876@gamil.com</td>
+            <td>9741075398</td>
+          </tr>
+        </table>
+      </div>   
+    
+    </body>
+</html>
+    

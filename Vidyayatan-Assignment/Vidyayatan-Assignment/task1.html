@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkbox Row Selection</title>
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+
+  tr.selected {
+    background-color: #f0f0f0; /* Background color for selected rows */
+  }
+</style>
+</head>
+<body>
+
+<table id="myTable">
+<thead>
+  <tr>
+    <th><input type="checkbox" id="selectAll" onclick="selectAllRows()"></th> <!-- Checkbox for selecting all rows -->
+    <th>Name</th>
+    <th>Email</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><input type="checkbox" class="rowCheckbox" onchange="toggleRowSelection(this)"></td> <!-- Checkbox for first row -->
+    <td>sana</td>
+    <td>khansana8314@gmail.com</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" class="rowCheckbox" onchange="toggleRowSelection(this)"></td> <!-- Checkbox for second row -->
+    <td>Jane Smith</td>
+    <td>jane@example.com</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" class="rowCheckbox" onchange="toggleRowSelection(this)"></td> <!-- Checkbox for first row -->
+    <td>rahol</td>
+    <td>rahol876@gmail.com</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" class="rowCheckbox" onchange="toggleRowSelection(this)"></td> <!-- Checkbox for first row -->
+    <td>yasmin</td>
+    <td>yasmin98@gmail.com</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" class="rowCheckbox" onchange="toggleRowSelection(this)"></td> <!-- Checkbox for first row -->
+    <td>saniya</td>
+    <td>saniya123@gmail.com</td>
+  </tr>
+  <!-- Add more rows as needed -->
+</tbody>
+</table>
+
+<script>
+  function selectAllRows() {
+    var checkboxes = document.getElementsByClassName('rowCheckbox');
+    var selectAllCheckbox = document.getElementById('selectAll');
+    for (var i = 0; i < checkboxes.length; i++) {
+      checkboxes[i].checked = selectAllCheckbox.checked;
+      toggleRowBackground(checkboxes[i].parentNode.parentNode);
+    }
+  }
+
+  function toggleRowSelection(checkbox) {
+    toggleRowBackground(checkbox.parentNode.parentNode);
+  }
+
+  function toggleRowBackground(row) {
+    row.classList.toggle('selected');
+  }
+</script>
+
+</body>
+</html>
