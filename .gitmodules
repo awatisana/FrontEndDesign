@@ -1,0 +1,3 @@
+[submodule "socialmediafrom/socialmediafrom/FrontEndDesign"]
+	path = socialmediafrom/socialmediafrom/FrontEndDesign
+	url = https://github.com/awatisana/FrontEndDesign.git
